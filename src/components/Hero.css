@@ -1,0 +1,491 @@
+.hero-container {
+    min-height: 100vh;
+    background-color: #f9f9f9;
+}
+
+.hero-section {
+    height: 100vh;
+    width: 100%;
+    /* Option 1: Using a local image from public folder */
+    background-image: url('../../public/images/hero.jpg');
+    
+    /* Option 2: Using an online image URL */
+    /* background-image: url('https://images.unsplash.com/photo-1548199973-03cce0bbc87b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80'); */
+    
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    padding: 2rem;
+    max-width: 800px;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    color: #ffffff;
+    margin-bottom: 2rem;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.primary-btn {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.secondary-btn {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+/* Mission Section Styles */
+.mission-section {
+    padding: 4rem 2rem;
+    background-color: white;
+}
+
+.tabs-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tabs {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.tab {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border: none;
+    background: none;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-bottom: 3px solid transparent;
+}
+
+.tab.active {
+    color: #4CAF50;
+    border-bottom: 3px solid #4CAF50;
+}
+
+/* Tab Content Animations */
+.tab-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    min-height: 400px;
+}
+
+.mission-content,
+.impact-content,
+.join-content {
+    animation: fadeIn 0.5s ease-in-out;
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.mission-content.active,
+.impact-content.active,
+.join-content.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Enhanced Card Animations */
+.impact-card,
+.join-card,
+.feature-card {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.impact-card::before,
+.join-card::before,
+.feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(76, 175, 80, 0.1), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.impact-card:hover::before,
+.join-card:hover::before,
+.feature-card:hover::before {
+    opacity: 1;
+}
+
+.impact-card:hover,
+.join-card:hover,
+.feature-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Stat Number Animation */
+.stat-number {
+    display: inline-block;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.stat-item:hover .stat-number {
+    transform: scale(1.1);
+    color: #45a049;
+}
+
+/* Join Button Animation */
+.join-btn {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.join-btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s ease, height 0.6s ease;
+}
+
+.join-btn:hover::after {
+    width: 300px;
+    height: 300px;
+}
+
+.join-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(76, 175, 80, 0.3);
+}
+
+/* Tab Animation Enhancement */
+.tab {
+    position: relative;
+    overflow: hidden;
+}
+
+.tab::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background: #4CAF50;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.tab:hover::after {
+    width: 100%;
+}
+
+.tab.active::after {
+    width: 100%;
+}
+
+/* Mission Stats Animation */
+.mission-stats {
+    perspective: 1000px;
+}
+
+.stat-item {
+    transform-style: preserve-3d;
+    transition: transform 0.3s ease;
+}
+
+.stat-item:hover {
+    transform: rotateX(10deg) rotateY(10deg);
+}
+
+/* Impact Grid Animation */
+.impact-grid {
+    perspective: 1000px;
+}
+
+.impact-card {
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease;
+}
+
+.impact-card:hover {
+    transform: rotateX(5deg) rotateY(5deg) translateY(-5px);
+}
+
+/* Join Options Animation */
+.join-options {
+    perspective: 1000px;
+}
+
+.join-card {
+    transform-style: preserve-3d;
+    transition: transform 0.5s ease;
+}
+
+.join-card:hover {
+    transform: rotateX(5deg) rotateY(5deg) translateY(-5px);
+}
+
+.mission-content h2,
+.impact-content h2,
+.join-content h2 {
+    text-align: center;
+    color: #4CAF50;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.mission-text {
+    text-align: center;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 3rem;
+}
+
+.mission-stats {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    margin-top: 3rem;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #4CAF50;
+}
+
+.stat-label {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+/* Impact Section Styles */
+.impact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.impact-card {
+    background: #f9f9f9;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.impact-card:hover {
+    transform: translateY(-5px);
+}
+
+.impact-card h3 {
+    color: #4CAF50;
+    margin-bottom: 1rem;
+}
+
+/* Join Section Styles */
+.join-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.join-card {
+    background: #f9f9f9;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.join-card:hover {
+    transform: translateY(-5px);
+}
+
+.join-card h3 {
+    color: #4CAF50;
+    margin-bottom: 1rem;
+}
+
+.join-btn {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 25px;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.join-btn:hover {
+    background: #45a049;
+    transform: translateY(-2px);
+}
+
+/* Features Section Styles */
+.features-section {
+    padding: 4rem 2rem;
+    background-color: #f9f9f9;
+}
+
+.features-section h2 {
+    text-align: center;
+    color: #4CAF50;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.feature-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.feature-card h3 {
+    color: #4CAF50;
+    margin-bottom: 1rem;
+}
+
+.feature-card p {
+    color: #666;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .btn {
+        padding: 0.8rem 1.6rem;
+        font-size: 1rem;
+    }
+
+    .tabs {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .mission-stats {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .features-grid,
+    .impact-grid,
+    .join-options {
+        grid-template-columns: 1fr;
+    }
+} 
