@@ -2,6 +2,7 @@
     padding: 4rem 2rem;
     background-color: #f8f9fa;
     min-height: 100vh;
+    margin-top: 70px; /* Add margin to account for fixed navbar */
 }
 
 .volunteer-form-header {
@@ -23,7 +24,7 @@
 }
 
 .volunteer-form-wrapper {
-    max-width: 1000px;
+    max-width: 800px;
     margin: 0 auto;
     background: white;
     padding: 2rem;
@@ -90,6 +91,11 @@
     cursor: pointer;
     transition: background-color 0.3s ease;
     margin-top: 1rem;
+    width: 100%;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 }
 
 .submit-button:hover {
@@ -110,10 +116,15 @@
     }
 
     .volunteer-form-wrapper {
-        padding: 1rem;
+        padding: 1.5rem;
     }
 
     .volunteer-form-wrapper iframe {
         min-height: 600px;
+    }
+
+    .submit-button {
+        width: 100%;
+        max-width: none;
     }
 } 
