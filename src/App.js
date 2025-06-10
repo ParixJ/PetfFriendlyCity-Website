@@ -6,6 +6,7 @@ import Hero from './components/Hero';
 import Footer from './components/Footer';
 import About from './components/About';
 import VolunteerForm from './components/VolunteerForm';
+import Stories from './components/Stories';
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Hero />} />
           <Route path="/about" element={<About />} />
-          <Route path="/stories" element={<div className="page-content">Stories Page Coming Soon</div>} />
+          <Route path="/stories" element={<Stories />} />
           <Route path="/contact" element={<div className="page-content">Contact Page Coming Soon</div>} />
           <Route path="/volunteer" element={<VolunteerForm />} />
         </Routes>
