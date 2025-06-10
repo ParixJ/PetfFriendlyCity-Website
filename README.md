@@ -1,94 +1,98 @@
-# Pet-Friendly Cities Initiative
+# College Tips Website
 
-A modern web application dedicated to making cities more welcoming for pets and their owners. This platform connects communities, promotes pet-friendly policies, and facilitates volunteer engagement.
+A modern website for college students to share and discover tips, stories, and resources.
 
-## 🌟 Features
+## Features
 
-- **Interactive Landing Page**: Engaging hero section with mission statement and call-to-action
-- **About Section**: Detailed information about our mission and impact
-- **Volunteer Registration**: Custom form for community members to join the initiative
-- **Responsive Design**: Fully responsive layout that works on all devices
-- **Modern UI/UX**: Clean, intuitive interface with smooth animations
-- **Navigation**: Easy-to-use navigation system with multiple sections
+- Modern, responsive design
+- Interactive navigation
+- AI-powered chatbot assistant
+- User-friendly interface
+- Mobile-first approach
 
-## 🛠️ Tech Stack
+## Prerequisites
 
-- React.js
-- React Router for navigation
-- CSS3 with modern features
-- Responsive design principles
-- Modern JavaScript (ES6+)
+- Node.js (v14 or higher)
+- npm (v6 or higher)
+- OpenAI API key
 
-## 📋 Prerequisites
-
-Before you begin, ensure you have the following installed:
-- Node.js (v14.0.0 or higher)
-- npm (v6.0.0 or higher)
-
-## 🚀 Getting Started
+## Installation
 
 1. Clone the repository:
 ```bash
-git clone [repository-url]
+git clone <repository-url>
+cd college-tips
 ```
 
-2. Navigate to the project directory:
-```bash
-cd pet-friendly-cities
-```
-
-3. Install dependencies:
+2. Install dependencies:
 ```bash
 npm install
 ```
 
-4. Start the development server:
+3. Create a `.env` file in the root directory and add your OpenAI API key:
+```
+OPENAI_API_KEY=your_openai_api_key_here
+PORT=3001
+```
+
+## Running the Application
+
+1. Start the backend server (in one terminal):
+```bash
+npm run server
+```
+
+2. Start the React development server (in another terminal):
 ```bash
 npm start
 ```
 
-The application will open in your default browser at `http://localhost:3000`
+The application will be available at:
+- Frontend: http://localhost:3000
+- Backend: http://localhost:3001
 
-## 📁 Project Structure
+## Project Structure
 
 ```
-pet-friendly-cities/
+college-tips/
 ├── public/
-│   ├── images/
-│   └── index.html
 ├── src/
 │   ├── components/
-│   │   ├── About.js
-│   │   ├── About.css
-│   │   ├── Hero.js
-│   │   ├── Hero.css
 │   │   ├── Navbar.js
 │   │   ├── Navbar.css
-│   │   ├── Footer.js
-│   │   ├── Footer.css
-│   │   ├── VolunteerForm.js
-│   │   └── VolunteerForm.css
+│   │   ├── Chatbot.js
+│   │   └── Chatbot.css
 │   ├── App.js
 │   └── index.js
+├── server.js
 ├── package.json
-└── README.md
+└── .env
 ```
 
-## 🎨 Customization
+## Features
 
-### Images
-- Replace images in the `public/images` directory
-- Update image paths in respective component files
+### Navigation
+- Responsive navbar with mobile menu
+- Smooth transitions and animations
+- Active state indicators
 
-### Colors
-- Primary color: #4CAF50 (Green)
-- Secondary colors can be modified in CSS files
+### Chatbot
+- AI-powered navigation assistant
+- Real-time responses
+- Mobile-friendly interface
+- Typing indicators
+- Error handling
 
-### Content
-- Update text content in component files
-- Modify form fields in `VolunteerForm.js`
+## Technologies Used
 
-## 🤝 Contributing
+- React.js
+- Express.js
+- OpenAI API
+- Material-UI
+- CSS3
+- Node.js
+
+## Contributing
 
 1. Fork the repository
 2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
@@ -96,18 +100,10 @@ pet-friendly-cities/
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## 📝 License
+## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-## 👥 Contact
+## Support
 
-For any queries or support, please reach out to:
-- Email: [your-email@example.com]
-- Website: [your-website.com]
-
-## 🙏 Acknowledgments
-
-- Thanks to all contributors
-- Inspired by the need for more pet-friendly urban spaces
-- Built with ❤️ for pets and their owners 
+For support, email support@collegetips.com or open an issue in the repository. 
