@@ -23,12 +23,19 @@
 }
 
 .volunteer-form-wrapper {
-    max-width: 800px;
+    max-width: 1000px;
     margin: 0 auto;
     background: white;
     padding: 2rem;
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.volunteer-form-wrapper iframe {
+    border: none;
+    width: 100%;
+    min-height: 800px;
+    background: white;
 }
 
 .volunteer-form {
@@ -103,6 +110,10 @@
     }
 
     .volunteer-form-wrapper {
-        padding: 1.5rem;
+        padding: 1rem;
+    }
+
+    .volunteer-form-wrapper iframe {
+        min-height: 600px;
     }
 } 
