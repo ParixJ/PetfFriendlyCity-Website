@@ -1,27 +1,26 @@
 .volunteer-form-container {
-    padding: 2rem 1rem;
+    padding: 4rem 2rem;
     background-color: #f8f9fa;
+    min-height: 100vh;
     margin-top: 80px;
 }
 
 .volunteer-form-header {
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
 }
 
 .volunteer-form-header h1 {
-    font-size: 2.25rem;
-    color: var(--primary);
+    font-size: 2.5rem;
+    color: #2c3e50;
     margin-bottom: 1rem;
-    font-weight: 600;
 }
 
 .volunteer-form-header p {
     font-size: 1.1rem;
-    color: var(--text-secondary);
+    color: #666;
     max-width: 600px;
     margin: 0 auto;
-    line-height: 1.6;
 }
 
 .volunteer-form-wrapper {
@@ -29,7 +28,7 @@
     margin: 0 auto;
     background: white;
     padding: 2rem;
-    border-radius: 1rem;
+    border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
@@ -53,59 +52,63 @@
 }
 
 .form-group label {
+    font-weight: 600;
+    color: #2c3e50;
     font-size: 0.95rem;
-    font-weight: 500;
-    color: var(--text-primary);
 }
 
 .form-group input,
 .form-group select,
 .form-group textarea {
     padding: 0.75rem;
-    border: 1px solid #e2e8f0;
-    border-radius: 0.5rem;
-    font-size: 0.95rem;
-    transition: all 0.3s ease;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
 }
 
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: var(--primary);
-    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+    border-color: #4CAF50;
+    box-shadow: 0 0 0 2px rgba(76, 175, 80, 0.1);
 }
 
 .form-group textarea {
-    min-height: 120px;
     resize: vertical;
+    min-height: 100px;
 }
 
 .submit-button {
-    background-color: var(--primary);
+    background-color: #4CAF50;
     color: white;
-    padding: 0.875rem 1.5rem;
+    padding: 1rem 2rem;
     border: none;
-    border-radius: 0.5rem;
-    font-size: 1rem;
-    font-weight: 500;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    font-weight: 600;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: background-color 0.3s ease;
     margin-top: 1rem;
+    width: 100%;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 }
 
 .submit-button:hover {
-    background-color: var(--primary-dark);
-    transform: translateY(-1px);
+    background-color: #45a049;
 }
 
 .submit-button:active {
-    transform: translateY(0);
+    transform: translateY(1px);
 }
 
 @media (max-width: 768px) {
-    .volunteer-form-wrapper {
-        padding: 1.5rem;
+    .volunteer-form-container {
+        padding: 2rem 1rem;
     }
 
     .volunteer-form-header h1 {
@@ -116,7 +119,34 @@
         font-size: 1rem;
     }
 
-    .volunteer-form-wrapper iframe {
-        min-height: 600px;
+    .volunteer-form-wrapper {
+        padding: 1.5rem;
+        margin: 0 1rem;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        font-size: 16px; /* Prevents zoom on iOS */
+    }
+}
+
+@media (max-width: 480px) {
+    .volunteer-form-container {
+        padding: 1.5rem 0.75rem;
+    }
+
+    .volunteer-form-header h1 {
+        font-size: 1.75rem;
+    }
+
+    .volunteer-form-wrapper {
+        padding: 1.25rem;
+        margin: 0 0.5rem;
+    }
+
+    .submit-button {
+        padding: 0.875rem 1.5rem;
+        font-size: 1rem;
     }
 } 
