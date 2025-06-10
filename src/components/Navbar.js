@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
+import Chatbot from './Chatbot';
 
 const Navbar = () => {
   return (
@@ -21,6 +22,9 @@ const Navbar = () => {
           </li>
           <li className="nav-item">
             <Link to="/contact" className="nav-link">Contact</Link>
+          </li>
+          <li className="nav-item">
+            <Chatbot />
           </li>
         </ul>
       </div>
